@@ -1,0 +1,73 @@
+<ul class="sidebar-nav">
+    <li class="sidebar-brand">
+        <a href="#" (click)="onClickAnimationMenu()">
+            Animations
+        </a>
+    </li>
+    <div *ngIf="showAnimations">
+        <li>
+            <a href="/#fadeInOut">fadeInOut</a>
+        </li>
+        <li>
+            <a>fadeIn</a>
+        </li>
+    </div>
+    <li class="sidebar-brand">
+        <a href="#" (click)="onClickComponentMenu()">
+            Components
+        </a>
+    </li>
+    <div *ngIf="showComponents">
+        <li>
+            <a href="/#">cb-na-toggle</a>
+        </li>
+        <li>
+            <a href="/#cbPhoneMask">cb-phone-mask</a>
+        </li>
+        <li>
+            <a href="/#cbIToggle">cb-itoggle</a>
+        </li>
+        <li>
+            <a href="/#cbDateTime">cb-date-time</a>
+        </li>
+        <li>
+            <a href="/#cbInfo">cb-info</a>
+        </li>
+        <li>
+            <a href="/#CbSearch">cb-search</a>
+        </li>
+        <li>
+            <a href="/#CbMultiSelect">cb-multiselect</a>
+        </li>
+    </div>
+    <li class="sidebar-brand">
+        <a href="#" (click)="directives= !directives">
+            Directives
+        </a>
+    </li>
+    <div *ngIf="directives">
+        <li>
+            <a>test</a>
+        </li>
+    </div>
+    <li class="sidebar-brand">
+        <a href="#" (click)="pipes= !pipes">
+            Pipes
+        </a>
+    </li>
+    <div *ngIf="pipes">
+        <li>
+            <a>test</a>
+        </li>
+    </div>
+    <li class="sidebar-brand">
+        <a href="#" (click)="styleGuide= !styleGuide">
+            Style Guide
+        </a>
+    </li>
+    <div *ngIf="styleGuide">
+        <li>
+            <a>test</a>
+        </li>
+    </div>
+</ul>

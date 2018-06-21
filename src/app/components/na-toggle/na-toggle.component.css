@@ -1,0 +1,11 @@
+cb-na-toggle {
+    display: inline-block;
+    font-weight: bold;
+    min-width: 131px;
+    text-align: center;
+  }
+  
+  cb-na-toggle input {
+    display: none;
+  }
+  

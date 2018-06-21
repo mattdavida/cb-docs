@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-lg-12" [id]="model.idName">
+        <div class="page-header">
+            <h2 class="pTop10">{{model.title}}</h2>
+        </div>
+        <div class="col-md-6">
+            <code [innerText]="model.codeText">
+                </code>
+        </div>
+        <div class="col-md-6">
+            <label *ngIf="model.exampleLabel" class="col-md-4 control-label">{{model.exampleLabel}}</label>
+            <div [ngClass]="{'col-md-8': model.exampleLabel, 'col-md-12': model.componentSubText}" [ngSwitch]="model.title">
+                <div *ngSwitchCase="'CbNaToggle'">
+                    <cb-na-toggle name="naToggleTest" [(ngModel)]="naToggleTest"></cb-na-toggle>
+                </div>
+                <div *ngSwitchCase="'CbPhoneMask'">
+                    <cb-phone-mask name="Phone" [(ngModel)]="phoneMaskTest"></cb-phone-mask>
+                </div>
+                <div *ngSwitchCase="'cbIToggle'">
+                    <cb-itoggle></cb-itoggle>
+                </div>
+                <div *ngSwitchCase="'cbDateTime'">
+                    <cb-date-time></cb-date-time>
+                    <p class="text-muted">{{model.componentSubText}}</p>
+                </div>
+                <div *ngSwitchCase="'CbSearch'">
+                    <cb-search></cb-search>
+                </div>
+                <div *ngSwitchCase="'CbMultiSelect'">
+                    <cb-multiselect name="test12"></cb-multiselect>
+                </div>
+                <div *ngSwitchCase="'cbInfo'">
+                    <div>Testing cb-info
+                        <cb-info tooltip="cb-info" appendTo="body"></cb-info>
+                    </div>
+                </div>
+
+
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

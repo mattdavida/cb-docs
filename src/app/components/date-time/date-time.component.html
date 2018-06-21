@@ -1,0 +1,14 @@
+<form class="border-none outline-none" [formGroup]="form">
+    <div class="row">
+        <div class="col-lg-6">
+            <cb-datepicker formControlName="selectedDate" dateClass="form-control pright-0" [required]="required" [minimumDate]="minimumDate"
+                [maximumDate]="maximumDate" [clearInvalidDates]="false"></cb-datepicker>
+            <div class="text-danger" *ngIf="form.get('selectedDate').hasError('minDate') || form.get('selectedDate').hasError('maxDate')">
+                Date does not fit within expected time range
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <cb-time-picker formControlName="selectedTime" [hidden]="!selectedDate" [showSeconds]="showSeconds" [isMidnightValid]="false"></cb-time-picker>
+        </div>
+    </div>
+</form>

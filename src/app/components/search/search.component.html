@@ -1,0 +1,11 @@
+<div class="pos-rel">
+    <p-autoComplete #autoComplete class="dis-block" (cbOffClick)="hidePanel()" [ngClass]="{'multiple': multiple}" [disabled]="disabled"
+        inputStyleClass="{{styleClass}}" [(ngModel)]="selectedItems" (onBlur)="onChange($event)" [suggestions]="searchResults"
+        (completeMethod)="searchItems($event)" (onSelect)="updateModel()" (onUnselect)="updateModel(true)" minLength="3" [field]="valueProp"
+        [dataKey]="idProp" [multiple]="multiple" emptyMessage="No Results Found" [required]="required" [readonly]="isSingleItemSelected"
+        placeholder="Enter at least 3 characters">
+    </p-autoComplete>
+    <a class="remove-icon" *ngIf="isSingleItemSelected" (click)="clearItem()">
+        <i class="fa fa-times"></i>
+    </a>
+</div>

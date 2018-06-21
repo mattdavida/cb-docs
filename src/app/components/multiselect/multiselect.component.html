@@ -1,0 +1,11 @@
+<div class="pos-rel">
+    <div [ngBusy]="lookupSubscription">
+        <p-autoComplete #autoComplete [(ngModel)]="selectedItems" delay="0" [multiple]="true" [suggestions]="filteredLookup" [dropdown]="true"
+            (completeMethod)="searchItems($event)" [disabled]="disabled" (click)="onClick($event)" (onSelect)="updateModel()"
+            (onUnselect)="updateModel()" field="value" dataKey="id">
+            <ng-template let-item pTemplate="item" *ngIf="template">
+                <ng-template [ngTemplateOutlet]="template" [ngOutletContext]="{$implicit: item}"></ng-template>
+            </ng-template>
+        </p-autoComplete>
+    </div>
+</div>

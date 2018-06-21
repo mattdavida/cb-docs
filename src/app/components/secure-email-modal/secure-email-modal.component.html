@@ -1,0 +1,52 @@
+<p-dialog [(visible)]="show" header="Please enter secure email address to send {{type === 'report' ? 'report' : 'document'}}"
+    [modal]="true" [draggable]="false" [resizable]="false" responsive="true" width="598" (onHide)="close();" positionTop="30">
+    <div>
+        <form #form="ngForm" name="form" class="form-horizontal" novalidate>
+            <div class="form-group">
+                <label class="control-label mleft-5">User Lookup:</label>
+                <br />
+                <div class="col-xs-12">
+                    <cb-search name="users" [ngModel]="userSearch" (ngModelChange)="userChange($event)" [multiple]="false" searchFunctionName="userSearch"></cb-search>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label mleft-5">Email:
+                    <span class="required-icon"></span>
+                </label>
+                <br />
+                <div class="col-xs-12">
+                    <input type="email" email required class="form-control" name="email" [(ngModel)]="email" [disabled]="fieldDisabled" />
+                    <div class="text-danger" *ngIf="submitted && !email">Email is required</div>
+                    <div class="text-danger" *ngIf="submitted && form.controls?.email?.errors?.email">Must be a valid email address.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label mleft-5">Notes:</label>
+                <br />
+                <div class="col-xs-12">
+                    <textarea class="form-control" type="text" name="notes" [(ngModel)]="notes"></textarea>
+                </div>
+            </div>
+            <div class="form-group" *ngIf="type === 'report'">
+                <label class=" col-xs-12">File Format:</label>
+                <div class="col-xs-6">
+                    <select class="form-control" name="fileFormat" [(ngModel)]="fileFormat">
+                        <option value="Excel">Excel</option>
+                        <option value="PDF">PDF</option>
+                        <option value="Word">Word</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <p class="col-xs-12">
+                    You are potentially sending Protected Health Information. By clicking send, you are agreeing that the email address above
+                    is the correct email address for the person you are intending this message to go to.
+                </p>
+            </div>
+        </form>
+    </div>
+    <p-footer>
+        <button class="btn btn-primary" type="button" tooltip="Send secure email" container="body" (click)="send()">Send</button>
+        <button class="btn btn-default" type="button" (click)="close();">Cancel</button>
+    </p-footer>
+</p-dialog>

@@ -1,1 +1,253 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+
+body { padding-top: 50px; }
+
+code {
+  background-color: #000 !important;
+  color: #77ff33 !important; 
+}
+
+.code-bg {
+  background-color: #000 !important;
+}
+
+cb-multiselect p-autocomplete > .ui-autocomplete,
+cb-search p-autocomplete > .ui-autocomplete,
+cb-search .ui-autocomplete-multiple-container > .ui-autocomplete-input-token,
+cb-search .ui-autocomplete-multiple-container > .ui-autocomplete-input-token > input[type='text'],
+.location-selector-popup p-dropdown > .ui-dropdown,
+p-multiselect .ui-multiselect {
+  width: 100% !important;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+  
+  #sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #999;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  
+  #page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+  }
+  
+  #wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  .dl-confirmation-wrapper {
+    position: relative;
+  }
+  
+  .dl-confirmation-confirmation-box {
+    position: absolute;
+    margin-top: -34px;
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    padding: 5px !important;
+    min-width: 100px !important;
+    max-width: 250px !important;
+    width: 100%;
+    z-index: 5;
+  }
+  
+  .dl-confirmation-confirmation-box .btn {
+    width: 46%;
+  }
+  
+  .dl-confirmation-animate-confirmation-box.ng-enter {
+    -webkit-transition: all linear 0.15s;
+    transition: all linear 0.15s;
+  }
+  
+  .dl-confirmation-animate-confirmation-box.ng-enter,
+  .dl-confirmation-animate-confirmation-box.ng-leave.ng-leave-active {
+    line-height: 0;
+    opacity: 0;
+  }
+  
+  .dl-confirmation-animate-confirmation-box.ng-leave,
+  .dl-confirmation-animate-confirmation-box.ng-enter.ng-enter-active {
+    opacity: 1;
+    line-height: 1;
+  }
+  
+  .dl-confirmation-animate-main-button.ng-enter {
+    -webkit-transition: all linear 0.15s;
+    transition: all linear 0.15s;
+  }
+  
+  .dl-confirmation-animate-main-button.ng-enter,
+  .dl-confirmation-animate-main-button.ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+  
+  .dl-confirmation-animate-main-button.ng-leave,
+  .dl-confirmation-animate-main-button.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
+  
+  /* Sidebar Styles */
+  
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+  }
+  
+  .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .sidebar-nav li a:active,
+  .sidebar-nav li a:focus {
+    text-decoration: none;
+  }
+  
+  .sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+  }
+  
+  .sidebar-nav > .sidebar-brand a {
+    color: #fff;
+  }
+  
+  .sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+  }
+  
+
+.btn-primary {
+    background-color: #009688 !important;
+}
+.dl-itoggle {
+    display: inline-block;
+    width: 6em;
+    height: 29px;
+    line-height: 29px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .dl-itoggle-on,
+  .dl-itoggle-off {
+    font-weight: 700;
+    text-align: center;
+    width: 3em;
+  }
+  
+  .dl-itoggle-on {
+    float: left;
+    background-color: #009688;
+    color: rgba(255, 255, 255, 0.87);
+  }
+  
+  .dl-itoggle-off {
+    background-color: #e0e0e0;
+    color: #666666;
+    float: right;
+  }
+
+
+.m-bottom-0 {
+    margin-bottom: 0px !important;
+}
+.m-top-50 {
+    margin-top: 50px !important;
+}
+
+.pTop10 {
+    padding-top: 10px;
+}
+
+.w50 {
+    width: 50px;
+  }
+
+  @media (min-width: 768px) {
+    #wrapper {
+      padding-left: 250px;
+    }
+  
+    #wrapper.toggled {
+      padding-left: 0;
+    }
+  
+    #sidebar-wrapper {
+      width: 250px;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      width: 0;
+    }
+  
+    #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+    }
+  
+    #wrapper.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+    }
+  }

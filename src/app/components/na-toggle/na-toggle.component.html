@@ -1,0 +1,11 @@
+<span class="btn-group">
+    <label class="btn btn-default" [ngClass]="{'active btn-primary': model == yesValue}">
+        <input type="radio" [(ngModel)]="model" (change)="updateModel()" [value]="yesValue" [disabled]="disabled" name="model" /> {{yesText}}
+    </label>
+    <label class="btn btn-default" [ngClass]="{'active btn-primary': model == undefined}">
+        <input type="radio" [(ngModel)]="model" (change)="updateModel()" [value]="null" [disabled]="disabled" name="model" /> {{showNa !== false ? 'NA' : '&nbsp;&nbsp;&nbsp;'}}
+    </label>
+    <label class="btn btn-default" [ngClass]="{'active btn-primary': model == noValue}">
+        <input type="radio" [(ngModel)]="model" (change)="updateModel()" [value]="noValue" [disabled]="disabled" name="model" /> {{noText}}
+    </label>
+</span>

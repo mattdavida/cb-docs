@@ -1,0 +1,16 @@
+<form class="border-none inline-form outline-none" [formGroup]="form">
+    <input style="display: inline-block;" class="form-control" type="text" placeholder="HH" formControlName="hours" (blur)="updateModel()"
+        maxlength="2" autocomplete="off" />
+    <span class="separator">:</span>
+    <input style="display: inline-block;" class="form-control" type="text" placeholder="MM" formControlName="minutes" (blur)="updateModel()"
+        maxlength="2" autocomplete="off" />
+    <span *ngIf="showSeconds">
+        <span class="separator">:</span>
+        <input style="display: inline-block;" class="form-control" type="text" placeholder="SS" formControlName="seconds" (blur)="updateModel()"
+            maxlength="2" autocomplete="off" />
+    </span>
+    <button class="btn btn-default w50 ib" type="button" (click)="toggleMeridian()">{{form.get('isAm').value ? 'AM' : 'PM'}}</button>
+    <div class="text-danger font-size-14" *ngIf="form.hasError('invalidTime')">
+        Midnight is not a valid selection
+    </div>
+</form>

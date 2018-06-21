@@ -1,0 +1,8 @@
+<div>
+    <label class="dl-itoggle" [ngClass]="{disabled: disabled }">
+        <ng-content></ng-content>
+        <input type="checkbox" dl-hide-locked [(ngModel)]="value" [disabled]="disabled" class="hidden" />
+        <span class="dl-itoggle-on" *ngIf="value">Yes</span>
+        <span class="dl-itoggle-off" *ngIf="!value">No</span>
+    </label>
+</div>

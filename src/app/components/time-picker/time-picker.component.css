@@ -1,0 +1,27 @@
+body {
+    font-size: 0;
+  }
+  
+  input[type='text'],
+  button,
+  .separator {
+    font-size: 14px;
+  }
+  
+  input[type='text'],
+  button {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+  }
+  
+  .btn.btn-default {
+    vertical-align: top;
+  }
+  
+  .dl-readonly-textbox {
+    width: 35px;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+  
